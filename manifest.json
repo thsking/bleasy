@@ -1,0 +1,37 @@
+
+
+{
+	"manifest_version": 2,
+	"name":"bleasy",
+	"version":"1.0",
+	"browser_action": {
+		"default_popup":"index.html"
+	}, 
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery-3.2.1.min.js", "background.js"]
+		}
+	],
+	"permissions": [
+      "storage",
+      "tabs"
+  ]
+
+}
+/*{
+ "manifest_version": 2, // Indique la version du manifest (toujours 2)
+ "name": "bleasy", // Le nom de votre extension
+ "description": "What Bleach Easely", // La description
+ "version": "1.0", // La version en en l'occurrence la première donc 1.0
+ // Nous n'avons pas besoin d'avoir de permissions supplémentaires
+ "browser_action": {   // Les paramètres
+  "default_popup": "index.html" // Le popup qui s'affichera quand vous cliquez sur l'îcone
+ },
+ "icons": { // L'îcone qui s'affichera lorse que vous êtes sur la page extensions des paramètre
+  "64" : "icon.png" // 64 = 64x64 la taille de votre image
+ },
+ "background": { //Chargement des scripts en background de notre navigateur
+    "scripts": ["jquery-3.2.1.min.js", "background.js"]
+ }
+}*/
